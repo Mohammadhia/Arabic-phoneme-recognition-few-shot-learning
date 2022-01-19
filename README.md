@@ -3,21 +3,22 @@ This repository's codebase uses few shot learning with a siamese network to reco
 
 The idea was that because each letter in the Arabic language has a unique phoneme, then maybe with few-shot learning (using a few examples) we could produce an effective classifier. You might be thinking why we'd want to classify individual, isolated phonemes when speech to text is meant for full words and phrases. However, this could help those that are new to the language learn how to pronounce the individual sounds and letters correctly.
 
-The repo is structured as follows:
+### Repo Structure
 - `/test_data` - folder that contains the sample phonemes used for few-shot learning (all from same speaker)
 - `/letter_images` - folder that contains images corresponding to each letter in Arabic (for presentation of outputs of model)
 - `Arabic_phoneme_classifier_few_shot_learning.ipynb` - Notebook with all relevant/necessary code for this project
 
+### Improvement
 There is plenty of room for improvement as the final model did not perform as well on examples outside of the provided speaker. Potential improvements include:
 - Using a speech to text pre-trained model trained on Arabic-exclusive audio
 - Adding a more examples from a few different speakers
 - Experimenting with more audio pre-processing (especially to accommodate for inference data that will come from poor quality microphones)
 
-Lessons Learned:
+### Lessons Learned
 - Audio data is difficult to work with
 - Don't use TensorFlow (too many nuances and very finicky)
 
-Resources used:
+### Resources used
 - Siamese Network tutorial (for MNIST image data)
   - [Building image pairs](https://www.pyimagesearch.com/2020/11/23/building-image-pairs-for-siamese-networks-with-python/)
   - [Training Siamese Networks with Keras & TF](https://www.pyimagesearch.com/2020/11/30/siamese-networks-with-keras-tensorflow-and-deep-learning/)
